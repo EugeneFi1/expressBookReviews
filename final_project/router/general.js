@@ -58,15 +58,21 @@ async function getBooksList() {
 }
 
 async function getBookDetails(isbn) {
-  return axios.get(`http://localhost:5000/isbn/${isbn}`).then((res) => res.data);
+  return axios
+    .get(`http://localhost:5000/isbn/${isbn}`)
+    .then((res) => res.data);
 }
 
 async function getBookDetailsBasedOnAuthor(author) {
-  return axios.get(`http://localhost:5000/author/${author}`).then((res) => res.data);
+  return axios
+    .get(`http://localhost:5000/author/${author}`)
+    .then((res) => res.data);
 }
 
 async function getBookDetailsBasedOnTitle(title) {
-  return axios.get(`http://localhost:5000/title/${title}`).then((res) => res.data);
+  return axios
+    .get(`http://localhost:5000/title/${title}`)
+    .then((res) => res.data);
 }
 
 module.exports.general = public_users;
